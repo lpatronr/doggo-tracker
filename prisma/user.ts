@@ -11,7 +11,10 @@ export function createUser(cc: string, dogs: string[]): Prisma.Prisma__UserClien
   });
 }
 
-export function updateUser(cc: string, dogs: string[]): Prisma.Prisma__UserClient<User> {
+export function updateUser(
+  cc: string,
+  dogs: string[],
+): Prisma.Prisma__UserClient<Pick<User, 'cc' | 'dogs' | 'startDate'>> {
   return prisma.user.update({
     where: {
       cc,
@@ -19,6 +22,11 @@ export function updateUser(cc: string, dogs: string[]): Prisma.Prisma__UserClien
     data: {
       startDate: new Date(),
       dogs,
+    },
+    select: {
+      cc: true,
+      startDate: true,
+      dogs: true,
     },
   });
 }
