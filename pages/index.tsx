@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <MainLayout>
       <Head>
-        <title>Home</title>
+        <title>Doggo Tracker</title>
       </Head>
 
       <Link href='/dogs/register'>

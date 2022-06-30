@@ -3,6 +3,7 @@ import Card from '../../common/components/Card';
 import MainLayout from '../../common/layouts/MainLayout';
 import Error from '../../common/components/popups/Error';
 import LoadingIcon from '../../common/components/icons/LoadingIcon';
+import Head from 'next/head';
 
 export default function Tracker(): JSX.Element {
   const [input, setInput] = useState<string>('');
@@ -54,6 +55,9 @@ export default function Tracker(): JSX.Element {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Tracker</title>
+      </Head>
       {!data && (
         <Card>
           <h1 className='text-6xl mb-4'>🌎</h1>

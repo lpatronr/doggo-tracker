@@ -6,6 +6,7 @@ import Success from '../../common/components/popups/Success';
 import Error from '../../common/components/popups/Error';
 import MainLayout from '../../common/layouts/MainLayout';
 import Card from '../../common/components/Card';
+import Head from 'next/head';
 
 export type Input = {
   cc: string;
@@ -125,6 +126,10 @@ const Register: NextPage = () => {
 
   return (
     <MainLayout>
+      <Head>
+        <title>Register</title>
+      </Head>
+
       <Card>
         <form
           onSubmit={(e) => e.preventDefault()}
