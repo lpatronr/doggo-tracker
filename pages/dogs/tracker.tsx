@@ -58,6 +58,7 @@ export default function Tracker(): JSX.Element {
       <Head>
         <title>Tracker</title>
       </Head>
+
       {!data && (
         <Card>
           <h1 className='text-6xl mb-4'>🌎</h1>
