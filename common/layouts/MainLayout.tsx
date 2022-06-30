@@ -10,7 +10,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
       <nav className='flex justify-center items-center py-4 w-screen shadow-md'>
         <Link href='/'>
           <a className='text-indigo-600 font-bold text-xl text-center'>
-            Doggy<span className='text-indigo-700 text-lg font-medium'>.{path}</span>
+            Doggo<span className='text-indigo-700 text-lg font-medium'>.{path}</span>
           </a>
         </Link>
       </nav>
